@@ -1,0 +1,45 @@
+/* 폼 필수값 표시 버튼 */
+.critical-items{color: #ed4c78;font-size: 16px;display: inline-block;vertical-align: unset;margin-left: 2px;}
+
+/* 테이블 내용 항목 텍스트 줄이기 */
+.card-body .table-responsive tbody td a.text-overflow{display: inline-block;max-width: 905px;overflow: hidden;text-overflow:ellipsis;}
+
+/* 페이지 공통 필드 내용 지우기 버튼 */
+/* [참고] 글자 입력시 on class 가 추가되어 버튼이 보여짐*/
+.row .input-group .btn-text-delete{visibility: hidden;}
+.row .input-group .btn-text-delete.on {visibility: visible;}
+
+/* 커리큘럼 등록 페이지 타임 선택 버튼 */
+.btn-group.time-btn-wrap {flex-wrap:wrap;gap:5px}
+.btn-group .btn.time-btn{width: 100px;flex-shrink: 0;flex-grow: 0;border-radius: 0.3125rem!important;}
+
+/* 커리큘럼 관리 페이지 커스텀 디자인 */
+/* 캘린더 수정 */
+.curriculum-management .card .flatpickr-calendar {margin-top:0;box-shadow: 0 0.375rem 0.75rem rgba(140,152,164,.075);border: .0625rem solid rgba(231,234,243,.7);}
+.curriculum-management .card .flatpickr-calendar .flatpickr-day.today{color:#000;background-color: transparent;}
+.curriculum-management .card .flatpickr-calendar .flatpickr-day.today:hover{color:#377dff;background-color: rgba(55,125,255,.1);}
+.curriculum-management .card .flatpickr-calendar .flatpickr-day.today.selected{color:#fff;background-color: #377dff;}
+/* 예약 시간 리스트 타임 인풋 */
+.curriculum-management .card .time-input-box .time-input-wrap {position: relative;}
+.curriculum-management .card .time-input-box .time-input-wrap .js-flatpickr-time {text-align: left;}
+.curriculum-management .card .time-input-box .time-input-wrap button.btn {margin-top: 1rem;text-align: left;width: 100%;}
+.curriculum-management .card .time-input-box .input-group-add-field button.btn {text-align: left;width: 100%;}
+.curriculum-management .card .time-input-box .time-input-wrap:first-of-type button.btn {margin-top: 0;}
+.curriculum-management .card .time-input-box .legend-indicator {position: absolute;top:55%;right:30px}
+
+
+
+/* 예약캘린더 페이지 캘린더 수정 */
+/* [참고] 캘린더 설정 인원 다를시 표시되는 상태 동그라미는 task를 감싸고있는 
+a태그에 "label-on" 클래스 붙을 시에 표시 되도록 설정 */
+.fc-daygrid-event-dot {display: none;position:absolute;top:50%;right:10px;transform: translateY(-50%);border-color:#ed4c78;}
+.fc-daygrid-event.label-on .fc-daygrid-event-dot {display: block;}
+.fullcalendar-custom .fc-timegrid-event.label-on .fc-event-title.fc-sticky::after{display: inline-block;content:'';box-sizing: content-box;width:0;height: 0;border: calc(var(--fc-daygrid-event-dot-width,8px)/ 2) solid var(--fc-event-border-color,#ed4c78);border-radius: calc(var(--fc-daygrid-event-dot-width,8px)/ 2);margin-left: 5px;}
+/* 데이 캘린더 색상 제거 */
+.fullcalendar-custom.fc .fc-day-today .fc-col-header-cell-cushion{background-color: transparent;}
+.fullcalendar-custom.fc .fc-timegrid-col.fc-day-today{background-color: transparent;}
+
+.fullcalendar-custom .fc-daygrid-event {cursor: pointer;}
+
+.fc-daygrid .fc-scrollgrid thead,
+.fc-timegrid .fc-scrollgrid thead {background-color: #f8fafd};

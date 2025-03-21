@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공지사항 등록</title>
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/font/bootstrap-icons.css" />
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="../../assets/css/docs.min.css" />
+    <link rel="stylesheet" href="../../assets/css/theme.min.css" />
+
+    <!-- customize -->
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/customize.css" />
+  </head>
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl footer-offset">
+    <div class="wrap">
+      <!-- ========== HEADER ========== -->
+      <header class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-bordered bg-light">
+        <div class="navbar-nav-wrap align-items-center">
+          <div class="navbar-nav-wrap-content-start">
+            <h1 class="mb-0 text-body">DIOR CMS</h1>
+          </div>
+          <div class="navbar-nav-wrap-content-end">
+            <a href="#" class="btn btn btn-outline-none"> <i class="bi bi-box-arrow-left me-1"></i>로그아웃</a>
+          </div>
+        </div>
+      </header>
+      <!-- ========== END HEADER ========== -->
+
+      <!-- Navbar Vertical -->
+      <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered bg-white navbar-vertical-aside-initialized">
+        <div class="navbar-vertical-container">
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-aside-toggler">
+            <i
+              class="bi-arrow-bar-left navbar-toggler-short-align"
+              data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Collapse"
+            ></i>
+            <i
+              class="bi-arrow-bar-right navbar-toggler-full-align"
+              data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Expand"
+            ></i>
+          </button>
+
+          <!-- End Navbar Vertical Toggle -->
+          <div class="navbar-vertical-content">
+            <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
+              <div class="nav-item">
+                <a class="nav-link" href="./reservationCalendar.html" data-placement="left">
+                  <i class="bi-calendar-week nav-icon"></i>
+                  <span class="nav-link-title">예약 캘린더</span>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <a class="nav-link" href="./reservationList.html" data-placement="left">
+                  <i class="bi-receipt nav-icon"></i>
+                  <span class="nav-link-title">예약 리스트</span>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <a class="nav-link active" href="./notice.html" data-placement="left">
+                  <i class="bi bi-app-indicator nav-icon"></i>
+                  <span class="nav-link-title">공지사항</span>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a class="nav-link" href="./textManagement.html" data-placement="left">
+                  <i class="bi bi-gear nav-icon"></i>
+                  <span class="nav-link-title">텍스트 관리</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="main">
+        <!-- Content -->
+        <div class="content container-fluid">
+          <div class="page-header">
+            <div class="row align-items-center">
+              <button type="button" class="btn btn-ghost btn-icon btn-lg w-0 me-2" onclick="location.href = './notice.html'">
+                <i class="bi-chevron-left"></i>
+              </button>
+              <h2 class="page-header-title mb-0 w-25">공지사항 등록하기</h2>
+            </div>
+          </div>
+          <div class="row justify-content-lg-center">
+            <div class="card col-lg-10">
+              <form id="noticeAddForm" action="">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <label for="noticeTitleKo" class="col-2 col-form-label">제목(국문)<span class="critical-items">*</span> </label>
+                    <div class="col-sm-9">
+                      <input type="text" id="noticeTitleKo" class="form-control w-50" />
+                    </div>
+                  </div>
+                  <div class="row mb-4 align-items-center">
+                    <label for="noticeContentKo" class="col-2 col-form-label">내용(국문)<span class="critical-items">*</span> </label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control w-50" id="noticeContentKo" rows="6"></textarea>
+                    </div>
+                  </div>
+                  <div class="row mb-4 align-items-center">
+                    <label for="noticeTitleEn" class="col-2 col-form-label">제목(영문)<span class="critical-items">*</span> </label>
+                    <div class="col-sm-9">
+                      <input type="text" id="noticeTitleEn" class="form-control w-50" />
+                    </div>
+                  </div>
+                  <div class="row mb-4 align-items-center">
+                    <label for="noticeContentEn" class="col-2 col-form-label">내용(영문)<span class="critical-items">*</span> </label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control w-50" id="noticeContentEn" rows="6"></textarea>
+                    </div>
+                  </div>
+                  <div class="row mb-4 align-items-center">
+                    <label for="formCheck11" class="col-2 col-form-label">노출여부</label>
+                    <div class="col-sm-9">
+                      <!-- Checkbox -->
+                      <div class="form-check mb-3">
+                        <input type="checkbox" id="formCheck11" class="form-check-input" />
+                      </div>
+                      <!-- End Checkbox -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="btn btn-outline-danger me-2">취소</button>
+                  <button type="submit" id="noticeAddBtn" class="btn btn-primary" disabled>등록하기</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JS Global Compulsory  -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery/dist/jquery-ui.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/plugins.init.js"></script>
+    <!-- Plugins -->
+    <script src="../../assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside.js"></script>
+    <script src="../../assets/vendor/fullcalendar/main.min.js"></script>
+
+    <!-- Js -->
+    <script src="../js/noticeAdd.js"></script>
+
+    <script>
+      window.onload = function () {
+        // INITIALIZATION OF NAVBAR VERTICAL ASIDE
+        // =======================================================
+        new HSSideNav(".js-navbar-vertical-aside").init();
+      };
+    </script>
+  </body>
+</html>

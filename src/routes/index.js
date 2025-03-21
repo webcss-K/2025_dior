@@ -1,10 +1,10 @@
 import { useRoutes } from 'react-router-dom';
 
 // project import
-import sampleRoutes from 'routes/sampleRoutes';
+import pageRoutes from 'routes/pageRoutes';
 
 export default function ThemeRoutes() {
   return useRoutes([
-    sampleRoutes
+    pageRoutes
   ]);
 }

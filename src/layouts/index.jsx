@@ -1,15 +1,30 @@
 import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const Nav = React.lazy(() => import('layouts/CommonLayout/Nav'));
+// mui
+import { Layout } from 'antd';
+
+const { Content } = Layout;
+
+const LayoutHeader = React.lazy(() => import('layouts/CommonLayout/Header'));
+const LayoutSide = React.lazy(() => import('layouts/CommonLayout/Side'));
 
 const LayoutIndex =({ layout = 'blank' })=> {
   return(
     <>
-      {(layout === 'blank' || layout === 'samplePage') && (
-        <Suspense fallback={<div>loading samplePage...</div>}>
-          <Nav />
-          <Outlet />
+      {(layout === 'blank' || layout === 'basic') && (
+        <Suspense fallback={<div>loading DIOR...</div>}>
+          <Layout className='basicLayout'>
+            <LayoutSide />
+
+            <Layout className='contentLayout'>
+              <LayoutHeader />
+
+              <Content className='contents'>
+                <Outlet />
+              </Content>
+            </Layout>
+          </Layout>
         </Suspense>
       )}
       {(layout === 'blank' || layout === 'defaultProduct') && (

@@ -14,6 +14,7 @@ import Routes from 'routes';
 import 'utils/locales/i18n';
 
 // css
+import 'styles/layout.scss';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 // Start the mocking conditionally.

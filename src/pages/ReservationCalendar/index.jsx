@@ -15,9 +15,11 @@ const Calendar = (props) => {
         <Helmet>
             <title>{props.metaTitle}</title>
         </Helmet>
-        <div className={Style['member']}>
+
+        <div className='title'>{props.metaTitle}</div>
+        <div>
+          d
         </div>
-        <div>reservationCalendar<br/><br/><br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>11<br/>111<br/></div>
     </>
   )
 }

@@ -1,14 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Helmet} from "react-helmet";
 
 // style
-import Style from './index.module.scss';
+import './index.module.scss';
 
 const Calendar = (props) => {
-  
-  useEffect(()=>{
-    console.log("deploy test");
-  },[])
   
   return (
     <>
@@ -17,9 +13,6 @@ const Calendar = (props) => {
         </Helmet>
 
         <div className='title'>{props.metaTitle}</div>
-        <div>
-          d
-        </div>
     </>
   )
 }

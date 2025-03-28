@@ -15,7 +15,10 @@ import 'utils/locales/i18n';
 
 // css
 import 'styles/layout.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'react-loading-skeleton/dist/skeleton.css';
+import 'styles/theme.min.css';
 
 // Start the mocking conditionally.
 if (process.env.NODE_ENV === 'development') {

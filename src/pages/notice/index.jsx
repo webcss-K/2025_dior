@@ -2,7 +2,7 @@ import React from 'react';
 import {Helmet} from "react-helmet";
 
 // style
-import Style from './index.module.scss';
+import './index.module.scss';
 
 const Main = (props) => {
   

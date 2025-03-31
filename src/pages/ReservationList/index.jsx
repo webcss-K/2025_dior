@@ -7,6 +7,9 @@ import Style from './index.module.scss';
 // img
 import excel_icon from 'asset/img/excel-icon.svg';
 
+// components
+import Tables from 'components/Table';
+
 const Calendar = (props) => {
   
   return (
@@ -111,62 +114,7 @@ const Calendar = (props) => {
                   <div class="">( <span>1</span> / <span>3</span> )</div>
                   <button type="button" class="btn btn-white"><img class="avatar avatar-xss avatar-4x3 me-2" src={excel_icon} alt="excel" /> Excel Download</button>
                 </div>
-                <div class="table-responsive datatable-custom">
-                  <table class="js-datatable table table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No</th>
-                        <th>이름</th>
-                        <th>연락처</th>
-                        <th>예약종류</th>
-                        <th>방문 일</th>
-                        <th>방문 시간</th>
-                        <th>방문인원</th>
-                        <th>예약 일시</th>
-                        <th>취소 일시</th>
-                        <th>예약 상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>10</td>
-                        <td>홍길동</td>
-                        <td>010-1234-5678</td>
-                        <td>도슨튼 프로그램</td>
-                        <td>2023-03-08</td>
-                        <td>11:00</td>
-                        <td>2</td>
-                        <td>2023-03-01 13:00:55</td>
-                        <td></td>
-                        <td>예약</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>홍길동</td>
-                        <td>010-1234-5678</td>
-                        <td>도슨튼 프로그램</td>
-                        <td>2023-03-08</td>
-                        <td>11:00</td>
-                        <td>2</td>
-                        <td>2023-03-01 13:00:55</td>
-                        <td class="text-danger">2023-03-01 13:00:55</td>
-                        <td class="text-danger">취소</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>홍길동</td>
-                        <td>010-1234-5678</td>
-                        <td>도슨튼 프로그램</td>
-                        <td>2023-03-08</td>
-                        <td>11:00</td>
-                        <td>2</td>
-                        <td>2023-03-01 13:00:55</td>
-                        <td></td>
-                        <td>예약</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <Tables />
               </div>
               <div class="card-footer d-flex justify-content-center border-0">
                 <nav aria-label="Page navigation example">

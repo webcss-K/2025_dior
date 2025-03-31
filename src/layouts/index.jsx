@@ -27,6 +27,15 @@ const LayoutIndex =({ layout = 'blank' })=> {
           </Layout>
         </Suspense>
       )}
+      {(layout === 'blank' || layout === 'login') && (
+        <Suspense fallback={<div>loading DIOR...</div>}>
+          <Layout className='basicLayout'>
+            <Content className='contents'>
+              <Outlet />
+            </Content>
+          </Layout>
+        </Suspense>
+      )}
       {(layout === 'blank' || layout === 'defaultProduct') && (
         <Suspense fallback={<div>loading defaultProduct...</div>}>
           <Outlet />

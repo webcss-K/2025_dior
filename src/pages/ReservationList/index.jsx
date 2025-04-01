@@ -10,7 +10,7 @@ import excel_icon from 'asset/img/excel-icon.svg';
 // components
 import Tables from 'components/Table';
 
-const Calendar = (props) => {
+const ReservationList = (props) => {
   
   return (
     <>
@@ -145,4 +145,4 @@ const Calendar = (props) => {
   )
 }
 
-export default Calendar;
+export default ReservationList;

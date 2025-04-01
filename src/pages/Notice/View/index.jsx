@@ -4,8 +4,7 @@ import {Helmet} from "react-helmet";
 // style
 import './index.module.scss';
 
-const NoticeAdd = (props) => {
-  
+const NoticeView = (props) => {
   return (
     <>
       <Helmet>
@@ -19,17 +18,17 @@ const NoticeAdd = (props) => {
               <button type="button" class="btn btn-ghost btn-icon btn-lg w-0 me-2" onclick="location.href = './notice.html'">
                 <i class="bi-chevron-left"></i>
               </button>
-              <h2 class="page-header-title mb-0 w-25">공지사항 등록하기</h2>
+              <h2 class="page-header-title mb-0 w-25">공지사항 상세</h2>
             </div>
           </div>
           <div class="row justify-content-lg-center">
             <div class="card col-lg-10">
-              <form id="noticeAddForm" action="">
+              <form id="noticeDetailForm" action="">
                 <div class="card-body">
-                  <div class="row mb-4">
+                  <div class="row mb-4 align-items-center">
                     <label for="noticeTitleKo" class="col-2 col-form-label">제목(국문)<span class="critical-items">*</span> </label>
                     <div class="col-sm-9">
-                      <input type="text" id="noticeTitleKo" class="form-control w-50" />
+                      <input type="text" id="noticeTitleKo" class="form-control w-50" value="3월 예약 일정안내" />
                     </div>
                   </div>
                   <div class="row mb-4 align-items-center">
@@ -41,7 +40,7 @@ const NoticeAdd = (props) => {
                   <div class="row mb-4 align-items-center">
                     <label for="noticeTitleEn" class="col-2 col-form-label">제목(영문)<span class="critical-items">*</span> </label>
                     <div class="col-sm-9">
-                      <input type="text" id="noticeTitleEn" class="form-control w-50" />
+                      <input type="text" id="noticeTitleEn" class="form-control w-50" value="Reservation schedule for Aril" />
                     </div>
                   </div>
                   <div class="row mb-4 align-items-center">
@@ -54,14 +53,14 @@ const NoticeAdd = (props) => {
                     <label for="formCheck11" class="col-2 col-form-label">노출여부</label>
                     <div class="col-sm-9">
                       <div class="form-check mb-3">
-                        <input type="checkbox" id="formCheck11" class="form-check-input" />
+                        <input type="checkbox" id="formCheck11" class="form-check-input" checked />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-end">
                   <button type="button" class="btn btn-outline-danger me-2">취소</button>
-                  <button type="submit" id="noticeAddBtn" class="btn btn-primary" disabled>등록하기</button>
+                  <button type="submit" id="noticeEditBtn" class="btn btn-primary" disabled>수정하기</button>
                 </div>
               </form>
             </div>
@@ -72,4 +71,4 @@ const NoticeAdd = (props) => {
   )
 }
 
-export default NoticeAdd;
+export default NoticeView;

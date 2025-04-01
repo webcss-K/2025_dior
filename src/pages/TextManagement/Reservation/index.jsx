@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet";
 // style
 import './index.module.scss';
 
-const ReservationCalendarReservation = (props) => {
+const TextManagementReservation = (props) => {
   return (
     <>
       <Helmet>
@@ -63,4 +63,4 @@ const ReservationCalendarReservation = (props) => {
   )
 }
 
-export default ReservationCalendarReservation;
+export default TextManagementReservation;

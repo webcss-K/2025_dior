@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet";
 // style
 import './index.module.scss';
 
-const Main = (props) => {
+const Notice = (props) => {
   
   return (
     <>
@@ -163,4 +163,4 @@ const Main = (props) => {
   )
 }
 
-export default Main;
+export default Notice;

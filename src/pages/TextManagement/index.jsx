@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 // style
 import Style from './index.module.scss';
 
-const Main = (props) => {
+const TextManagement = (props) => {
   
   useEffect(()=>{
     console.log("deploy test");
@@ -83,4 +83,4 @@ const Main = (props) => {
   )
 }
 
-export default Main;
+export default TextManagement;

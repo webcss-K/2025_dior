@@ -10,7 +10,7 @@ const ReservationCalendarOpenSetting = lazy(() => import('pages/ReservationCalen
 const ReservationList = lazy(() => import('pages/ReservationList'));
 const Notice = lazy(() => import('pages/Notice'));
 const NoticeAdd = lazy(() => import('pages/Notice/Add'));
-const NoticeDetail = lazy(() => import('pages/Notice/Detail'));
+const NoticeView = lazy(() => import('pages/Notice/View'));
 
 const TextManagement = lazy(() => import('pages/TextManagement'));
 const TextManagementEdit = lazy(() => import('pages/TextManagement/Edit'));
@@ -51,9 +51,9 @@ const pageRoutes = {
       path: "/Notice/Add",
       element: <NoticeAdd metaTitle='공지사항 등록하기' />,
     },
-    {// NoticeDetail
-      path: "/Notice/Detail",
-      element: <NoticeDetail metaTitle='공지사항 상세' />,
+    {// NoticeView
+      path: "/Notice/View",
+      element: <NoticeView metaTitle='공지사항 상세' />,
     },
 
     {// TextManagement

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커리큘럼 관리</title>
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css" />
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="../../assets/css/docs.min.css" />
+    <link rel="stylesheet" href="../../assets/css/theme.min.css" />
+
+    <!-- customize -->
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/customize.css" />
+  </head>
+  <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl footer-offset">
+    <div class="wrap curriculum-management">
+      <!-- ========== HEADER ========== -->
+      <header class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-bordered bg-light">
+        <div class="navbar-nav-wrap align-items-center">
+          <div class="navbar-nav-wrap-content-start">
+            <h1 class="mb-0 text-body">DIOR CMS</h1>
+          </div>
+          <div class="navbar-nav-wrap-content-end">
+            <a href="#" class="btn btn btn-outline-none"> <i class="bi bi-box-arrow-left me-1"></i>로그아웃</a>
+          </div>
+        </div>
+      </header>
+      <!-- ========== END HEADER ========== -->
+
+      <!-- Navbar Vertical -->
+      <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered bg-white navbar-vertical-aside-initialized">
+        <div class="navbar-vertical-container">
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-aside-toggler">
+            <i
+              class="bi-arrow-bar-left navbar-toggler-short-align"
+              data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Collapse"
+            ></i>
+            <i
+              class="bi-arrow-bar-right navbar-toggler-full-align"
+              data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Expand"
+            ></i>
+          </button>
+
+          <!-- End Navbar Vertical Toggle -->
+          <div class="navbar-vertical-content">
+            <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
+              <div class="nav-item">
+                <a class="nav-link active" href="./reservationCalendar.html" data-placement="left">
+                  <i class="bi-calendar-week nav-icon"></i>
+                  <span class="nav-link-title">예약 캘린더</span>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <a class="nav-link" href="./reservationList.html" data-placement="left">
+                  <i class="bi-receipt nav-icon"></i>
+                  <span class="nav-link-title">예약 리스트</span>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <a class="nav-link" href="./notice.html" data-placement="left">
+                  <i class="bi bi-app-indicator nav-icon"></i>
+                  <span class="nav-link-title">공지사항</span>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a class="nav-link" href="./textManagement.html" data-placement="left">
+                  <i class="bi bi-gear nav-icon"></i>
+                  <span class="nav-link-title">텍스트 관리</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="main">
+        <!-- Content -->
+        <div class="content container-fluid">
+          <div class="page-header">
+            <div class="row align-items-center">
+              <button type="button" class="btn btn-ghost btn-icon btn-lg w-0 me-2" onclick="location.href = './reservationCalendar.html'">
+                <i class="bi-chevron-left"></i>
+              </button>
+              <h2 class="page-header-title mb-0 w-25">커리큘럼 관리</h2>
+            </div>
+          </div>
+          <form action="">
+            <div class="row justify-content-lg-center">
+              <!--탭버튼 Nav -->
+              <div class="text-center col-lg-10">
+                <ul class="nav nav-segment nav-pills mb-7" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="nav-one-eg1-tab" href="#nav-one-eg1" data-bs-toggle="pill" data-bs-target="#nav-one-eg1" role="tab" aria-controls="nav-one-eg1" aria-selected="true"
+                      >도슨트 프로그램</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nav-two-eg1-tab" href="#nav-two-eg1" data-bs-toggle="pill" data-bs-target="#nav-two-eg1" role="tab" aria-controls="nav-two-eg1" aria-selected="false"
+                      >부띠크 방문</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="nav-three-eg1-tab"
+                      href="#nav-three-eg1"
+                      data-bs-toggle="pill"
+                      data-bs-target="#nav-three-eg1"
+                      role="tab"
+                      aria-controls="nav-three-eg1"
+                      aria-selected="false"
+                      >CAFÉ DIOR</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--탭버튼 End Nav -->
+              <div class="card col-lg-10">
+                <div class="card-body">
+                  <!-- Tab Content -->
+                  <div class="tab-content">
+                    <!-- Tab 화면 1 -->
+                    <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel" aria-labelledby="nav-one-eg1-tab">
+                      <div class="row justify-content-between">
+                        <div class="col-lg-auto mt-4">
+                          <!-- Flatpickr -->
+                          <input type="text" class="js-flatpickr d-none" placeholder="Select dates" />
+                          <!-- End Flatpickr -->
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="h5">예약 시간 리스트&nbsp;<i class="bi bi-alarm"></i></p>
+                          <div class="card">
+                            <div class="card-body">
+                              <!-- Form -->
+                              <div
+                                class="js-add-field row mb-4"
+                                data-hs-add-field-options='{
+                                    "template": "#addTimeTemplate",
+                                    "container": "#addTimeFieldContainer",
+                                    "defaultCreated": 0
+                                  }'
+                              >
+                                <div class="col time-input-box">
+                                  <div class="time-input-wrap">
+                                    <!-- Flatpickr -->
+                                    <input
+                                      type="button"
+                                      class="js-flatpickr-time flatpickr-custom btn btn-white"
+                                      placeholder="00:00"
+                                      data-hs-flatpickr-options='{
+                                          "noCalendar": true,
+                                          "enableTime": true,
+                                          "dateFormat": "H:i",
+                                          "minTime": "10:00",
+                                          "maxTime": "20:00",
+                                          "time_24hr": true
+                                        }'
+                                    />
+                                    <!-- End Flatpickr -->
+                                  </div>
+                                  <div class="time-input-wrap">
+                                    <button type="button" class="btn btn-outline-secondary">14:00</button>
+                                    <span class="legend-indicator bg-danger"></span>
+                                  </div>
+                                  <div class="time-input-wrap">
+                                    <button type="button" class="btn btn-soft-secondary">15:00</button>
+                                    <span class="legend-indicator bg-danger"></span>
+                                  </div>
+
+                                  <!-- Container For Input Field -->
+                                  <div id="addTimeFieldContainer"></div>
+                                </div>
+                                <div class="col-sm-auto">
+                                  <a href="javascript:;" class="form-link fs-4 mt-2">
+                                    <i class="bi-plus-circle me-1"></i>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- End Form -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="mb-3">
+                                <label class="form-label" for="">예약 가능한 팀 수<span class="critical-items">*</span></label>
+                                <input type="number" id="" class="form-control" />
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label" for="">팀당 가능한 인원 수<span class="critical-items">*</span></label>
+                                <input type="number" id="" class="form-control" />
+                              </div>
+                              <div class="form-check mb-3">
+                                <label class="form-label" for="checkReservation1">예약 가능 여부</label>
+                                <input type="checkbox" id="checkReservation1" class="form-check-input" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tab 화면 2 -->
+                    <div class="tab-pane fade" id="nav-two-eg1" role="tabpanel" aria-labelledby="nav-two-eg1-tab">
+                      <div class="row justify-content-between">
+                        <div class="col-lg-auto mt-4">
+                          <!-- Flatpickr -->
+                          <input type="text" class="js-flatpickr d-none" placeholder="Select dates" />
+                          <!-- End Flatpickr -->
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="h5">예약 시간 리스트&nbsp;<i class="bi bi-alarm"></i></p>
+                          <div class="card">
+                            <div class="card-body">
+                              <!-- Form -->
+                              <div
+                                class="js-add-field row mb-4"
+                                data-hs-add-field-options='{
+                                    "template": "#addTimeTemplate",
+                                    "container": "#addTimeFieldContainer",
+                                    "defaultCreated": 0
+                                  }'
+                              >
+                                <div class="col time-input-box">
+                                  <div class="time-input-wrap">
+                                    <!-- Flatpickr -->
+                                    <input
+                                      type="button"
+                                      class="js-flatpickr-time flatpickr-custom btn btn-white"
+                                      placeholder="00:00"
+                                      data-hs-flatpickr-options='{
+                                        "noCalendar": true,
+                                        "enableTime": true,
+                                        "dateFormat": "H:i",
+                                        "minTime": "10:00",
+                                        "maxTime": "20:00",
+                                        "time_24hr": true
+                                      }'
+                                    />
+                                    <!-- End Flatpickr -->
+                                  </div>
+                                  <div class="time-input-wrap">
+                                    <button type="button" class="btn btn-outline-secondary">14:00</button>
+                                    <span class="legend-indicator bg-danger"></span>
+                                  </div>
+                                  <div class="time-input-wrap">
+                                    <button type="button" class="btn btn-outline-secondary">16:00</button>
+                                    <span class="legend-indicator bg-danger"></span>
+                                  </div>
+
+                                  <!-- Container For Input Field -->
+                                  <div id="addTimeFieldContainer"></div>
+                                </div>
+                                <div class="col-sm-auto">
+                                  <a href="javascript:;" class="form-link fs-4 mt-2">
+                                    <i class="bi-plus-circle me-1"></i>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- End Form -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="mb-3">
+                                <label class="form-label" for="">예약 가능한 팀 수<span class="critical-items">*</span></label>
+                                <input type="number" id="" class="form-control" />
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label" for="">팀당 가능한 인원 수<span class="critical-items">*</span></label>
+                                <input type="number" id="" class="form-control" />
+                              </div>
+                              <div class="form-check mb-3">
+                                <label class="form-label" for="checkReservation2">예약 가능 여부</label>
+                                <input type="checkbox" id="checkReservation2" class="form-check-input" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tab 화면 3 -->
+                    <div class="tab-pane fade" id="nav-three-eg1" role="tabpanel" aria-labelledby="nav-three-eg1-tab">
+                      <div class="row justify-content-between">
+                        <div class="col-lg-auto mt-4">
+                          <!-- Flatpickr -->
+                          <input type="text" class="js-flatpickr d-none" placeholder="Select dates" />
+                          <!-- End Flatpickr -->
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="h5">예약 시간 리스트&nbsp;<i class="bi bi-alarm"></i></p>
+                          <div class="card">
+                            <div class="card-body">
+                              <!-- Form -->
+                              <div
+                                class="js-add-field row mb-4"
+                                data-hs-add-field-options='{
+                                    "template": "#addTimeTemplate",
+                                    "container": "#addTimeFieldContainer",
+                                    "defaultCreated": 0
+                                  }'
+                              >
+                                <div class="col time-input-box">
+                                  <div class="time-input-wrap">
+                                    <!-- Flatpickr -->
+                                    <input
+                                      type="button"
+                                      class="js-flatpickr-time flatpickr-custom btn btn-white"
+                                      placeholder="00:00"
+                                      data-hs-flatpickr-options='{
+                                        "noCalendar": true,
+                                        "enableTime": true,
+                                        "dateFormat": "H:i",
+                                        "minTime": "10:00",
+                                        "maxTime": "20:00",
+                                        "time_24hr": true
+                                      }'
+                                    />
+                                    <!-- End Flatpickr -->
+                                  </div>
+                                  <p class="notice-text text-body text-center mt-4">등록된 커리큘럼 정보가 없습니다</p>
+                                  <!-- Container For Input Field -->
+                                  <div id="addTimeFieldContainer"></div>
+                                </div>
+                                <div class="col-sm-auto">
+                                  <a href="javascript:;" class="form-link fs-4 mt-2">
+                                    <i class="bi-plus-circle me-1"></i>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- End Form -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="mb-3">
+                                <label class="form-label" for="">예약 가능한 팀 수<span class="critical-items">*</span></label>
+                                <input type="number" id="" class="form-control" />
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label" for="">팀당 가능한 인원 수<span class="critical-items">*</span></label>
+                                <input type="number" id="" class="form-control" />
+                              </div>
+                              <div class="form-check mb-3">
+                                <label class="form-label" for="checkReservation3">예약 가능 여부</label>
+                                <input type="checkbox" id="checkReservation3" class="form-check-input" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+                <!-- Add 예약 시간 리스트 Input Field -->
+                <div id="addTimeTemplate" style="display: none">
+                  <div class="input-group-add-field">
+                    <button type="button" class="btn btn-outline-secondary w-100">13:00</button>
+                  </div>
+                </div>
+                <!-- End Add 예약 시간 리스트 Input Field -->
+              </div>
+              <div class="col-lg-10 d-flex align-items-center justify-content-end mt-4">
+                <button type="button" class="btn btn-outline-danger me-2">취소</button>
+                <button type="submit" id="noticeAddBtn" class="btn btn-primary">설정하기</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <!-- JS Global Compulsory  -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery/dist/jquery-ui.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/plugins.init.js"></script>
+    <!-- Plugins -->
+    <script src="../../assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside.js"></script>
+    <script src="../../assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="../../assets/vendor/hs-add-field/dist/hs-add-field.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="../../assets/js/theme.min.js"></script>
+
+    <!-- Js -->
+    <script src="../js/curriculumManagement.js"></script>
+
+    <script>
+      window.onload = function () {
+        // INITIALIZATION OF NAVBAR VERTICAL ASIDE
+        // =======================================================
+        new HSSideNav(".js-navbar-vertical-aside").init();
+      };
+    </script>
+  </body>
+</html>

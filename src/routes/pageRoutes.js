@@ -8,13 +8,12 @@ const ReservationCalendarManagement = lazy(() => import('pages/ReservationCalend
 const ReservationCalendarOpenSetting = lazy(() => import('pages/ReservationCalendar/OpenSetting'));
 
 const ReservationList = lazy(() => import('pages/ReservationList'));
+
 const Notice = lazy(() => import('pages/Notice'));
-const NoticeAdd = lazy(() => import('pages/Notice/Add'));
 const NoticeView = lazy(() => import('pages/Notice/View'));
 
 const TextManagement = lazy(() => import('pages/TextManagement'));
-const TextManagementEdit = lazy(() => import('pages/TextManagement/Edit'));
-const TextManagementReservation = lazy(() => import('pages/TextManagement/Reservation'));
+const TextManagementView = lazy(() => import('pages/TextManagement/View'));
 
 // ==============================|| AUTH ROUTING ||============================== //
 
@@ -24,49 +23,42 @@ const pageRoutes = {
   children: [
     {// Main > ReservationCalendar
       path: '/ReservationCalendar',
-      element: <ReservationCalendar metaTitle='예약 캘린더' />,
+      element: <ReservationCalendar metaTitle='예약 캘린더' key='1' />,
     },
     {// Main > ReservationCalendarAdd
       path: '/ReservationCalendar/Add',
-      element: <ReservationCalendarAdd metaTitle='커리큘럼 등록하기' />,
+      element: <ReservationCalendarAdd metaTitle='커리큘럼 등록하기' key='1' />,
     },
     {// Main > ReservationCalendarManagement
       path: '/ReservationCalendar/Management',
-      element: <ReservationCalendarManagement metaTitle='커리큘럼 관리' />,
+      element: <ReservationCalendarManagement metaTitle='커리큘럼 관리' key='1' />,
     },
     {// Main > ReservationCalendarOpenSetting
       path: '/ReservationCalendar/OpenSetting',
-      element: <ReservationCalendarOpenSetting metaTitle='오픈 설정' />,
+      element: <ReservationCalendarOpenSetting metaTitle='오픈 설정' key='1' />,
     },
 
     {// ReservationList
       path: "/ReservationList",
-      element: <ReservationList metaTitle='예약 리스트' />,
+      element: <ReservationList metaTitle='예약 리스트' key='2' />,
     },
+
     {// Notice
       path: "/Notice",
-      element: <Notice metaTitle='공지사항' />,
-    },
-    {// NoticeAdd
-      path: "/Notice/Add",
-      element: <NoticeAdd metaTitle='공지사항 등록하기' />,
+      element: <Notice metaTitle='공지사항' key='3' />,
     },
     {// NoticeView
       path: "/Notice/View",
-      element: <NoticeView metaTitle='공지사항 상세' />,
+      element: <NoticeView metaTitle='공지사항 상세' key='3' />,
     },
 
     {// TextManagement
       path: "/TextManagement",
-      element: <TextManagement metaTitle='텍스트 관리' />,
+      element: <TextManagement metaTitle='텍스트 관리' key='4' />,
     },
-    {// TextManagementEdit
-      path: "/TextManagement/Edit",
-      element: <TextManagementEdit metaTitle='팝업문구' />,
-    },
-    {// TextManagementReservation
-      path: "/TextManagement/Reservation",
-      element: <TextManagementReservation metaTitle='예약안내문구' />,
+    {// TextManagementView
+      path: "/TextManagement/View",
+      element: <TextManagementView metaTitle='상세' key='4' />,
     }
   ]
 };

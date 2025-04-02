@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
 // project import
-import sampleReducers from 'store/reducers/sampleReducers';
+import PageInfoReducers from 'store/reducers/PageInfoReducers';
 
 const reducers = combineReducers({
-  sampleReducers
+  PageInfoReducers
 });
 
 export default reducers;

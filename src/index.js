@@ -13,12 +13,14 @@ import Routes from 'routes';
 // icon
 import 'utils/locales/i18n';
 
-// css
-import 'styles/layout.scss';
+// lib
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'react-loading-skeleton/dist/skeleton.css';
-import 'styles/theme.min.css';
+import 'lib/css/theme.min.css';
+
+// css
+import 'styles/reset.scss';
 
 // Start the mocking conditionally.
 if (process.env.NODE_ENV === 'development') {

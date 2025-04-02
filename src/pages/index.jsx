@@ -19,13 +19,14 @@ const Main = (props) => {
           <p> - <Link to="/ReservationCalendar/Management">커리큘럼 관리</Link></p>
           <p> - <Link to="/ReservationCalendar/Add">커리큘럼 등록하기</Link></p>
           <p> - <Link to="/ReservationCalendar/OpenSetting">오픈설정</Link></p>
+          
           <p><Link to="/ReservationList">예약 리스트</Link></p>
+
           <p><Link to="/Notice">공지사항</Link></p>
           <p> - <Link to="/Notice/View">공지사항 상세</Link></p>
-          <p> - <Link to="/Notice/Add">공지사항 작성</Link></p>
+
           <p><Link to="/TextManagement">텍스트 관리</Link></p>
-          <p> - <Link to="/TextManagement/Edit">텍스트 관리 수정</Link></p>
-          <p> - <Link to="/TextManagement/Reservation">예약안내</Link></p>
+          <p> - <Link to="/TextManagement/View">텍스트 상세</Link></p>
         </div>
     </>
   )

@@ -20,7 +20,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import 'lib/css/theme.min.css';
 
 // css
-import 'styles/reset.scss';
+import 'styles/common.scss';
 
 // Start the mocking conditionally.
 if (process.env.NODE_ENV === 'development') {

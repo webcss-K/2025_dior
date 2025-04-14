@@ -1,9 +1,13 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import {Helmet} from "react-helmet";
 
 // style
 import Style from './index.module.scss';
+
+// conponents
+import SearchForm from 'components/SearchForm';
+import ListForm from 'components/ListForm';
+import Pagination from 'components/Pagination';
 
 const Notice = (props) => {
   
@@ -13,11 +17,25 @@ const Notice = (props) => {
           <title>{props.metaTitle}</title>
       </Helmet>
 
-      공지사항
+      <main class="main">
+        <div class="content container-fluid">
+          <div class="page-header">
+            <div class="row align-items-end">
+              <h2 class="page-header-title mb-0">{props.metaTitle}</h2>
+            </div>
+          </div>
 
-      <div className='PageLink'>
-        <p>- <Link to="/Notice/View">View</Link></p>
-      </div>
+          <div class="row">
+            <div class="card">
+              <SearchForm/>
+
+              <ListForm />
+              
+              <Pagination />
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   )
 }

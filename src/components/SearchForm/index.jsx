@@ -3,7 +3,7 @@ import React from 'react';
 // style
 import Style from './index.module.scss';
 
-// mui
+// antd
 import { Form, Row, Col, Input, Select, Button } from "antd";
 const { Option } = Select;
 

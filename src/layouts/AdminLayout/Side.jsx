@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 
-// mui
+// antd
 import Icon from '@mdi/react';
 import { mdiCalendarMultiselect, mdiReceiptTextOutline, mdiCheckboxBlankBadgeOutline, mdiCogOutline, mdiArrowExpandLeft } from '@mdi/js';
 import { Layout, Menu } from 'antd';

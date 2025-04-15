@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-// mui
+// antd
 import Icon from '@mdi/react';
 import { mdiLogoutVariant } from '@mdi/js';
 import { Layout, Button } from 'antd';

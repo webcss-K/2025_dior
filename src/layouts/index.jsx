@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import './layout.scss';
-// mui
+// antd
 import { Layout } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 

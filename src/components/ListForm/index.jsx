@@ -3,10 +3,22 @@ import React from 'react';
 // style
 import Style from './index.module.scss';
 
+// antd
+import { Table } from "antd";
+
 const ListForm = (props) => {
+  let dataTitleLength = props;
+  console.log(dataTitleLength)
 
   return (
     <>
+      <Table 
+        columns={props.columns} 
+        dataSource={props.data} 
+        bordered 
+        pagination={{ position: "BottomCenter" }} 
+       />
+
       <div class="card-body">
         <div class="d-flex justify-content-end mb-3">
           <a href="./noticeAdd.html" class="btn btn-soft-primary">등록하기<i class="bi bi-plus-circle-dotted pt-1 ms-1"></i> </a>
@@ -31,8 +43,7 @@ const ListForm = (props) => {
                 </td>
                 <td>
                   <a href="./noticeDetail.html" class="text-body text-overflow">
-                    DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은 DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은 DIOR SEONGSU의 3월 예약 일정 안내
-                    드립니다. 3월 예약 오픈 예정일은
+                    DIOR SEONGSU의 3월 예약 일정 안내 드립니다.
                   </a>
                 </td>
                 <td>국문</td>
@@ -45,7 +56,9 @@ const ListForm = (props) => {
                   <a href="./noticeDetail.html" class="text-body"> 3월 예약 일정 안내 </a>
                 </td>
                 <td>
-                  <a href="./noticeDetail.html" class="text-body text-overflow"> DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은 </a>
+                  <a href="./noticeDetail.html" class="text-body text-overflow">
+                    DIOR SEONGSU의 3월 예약 일정 안내 드립니다.
+                  </a>
                 </td>
                 <td>영문</td>
                 <td class="text-danger">비노출</td>
@@ -57,7 +70,9 @@ const ListForm = (props) => {
                   <a href="./noticeDetail.html" class="text-body"> 3월 예약 일정 안내 </a>
                 </td>
                 <td>
-                  <a href="./noticeDetail.html" class="text-body text-overflow"> DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은 </a>
+                  <a href="./noticeDetail.html" class="text-body text-overflow">
+                    DIOR SEONGSU의 3월 예약 일정 안내 드립니다.
+                  </a>
                 </td>
                 <td>영문</td>
                 <td class="text-danger">비노출</td>

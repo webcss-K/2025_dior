@@ -4,7 +4,7 @@ import React from 'react';
 import Style from './index.module.scss';
 
 // mui
-import { Select, Form } from "antd";
+import { Form, Row, Col, Input, Select, Button } from "antd";
 const { Option } = Select;
 
 const SearchForm = (props) => {
@@ -14,62 +14,59 @@ const SearchForm = (props) => {
       <div class="card-header">
         <div class="mb-2">
           <form id="noticeSearchForm">
-            <div class="row align-items-center mb-3">
-            <Form.Item name="gender" label="언어">
-              <Select
-                allowClear
-              >
-                <Option value="male">전체</Option>
-                <Option value="female">국문</Option>
-                <Option value="other">영문</Option>
-              </Select>
-            </Form.Item>
-              <label for="noticeTitle" class="col-sm-1 col-form-label">제목/내용</label>
-              <div class="col-sm-4">
-                <div class="input-group input-group-merge">
-                  <input type="text" id="noticeTitle" class="form-control" />
-                  <button type="button" id="textDelete" class="btn btn btn-outline-none btn-text-delete input-group-append input-group-text">
-                    <i class="bi bi-x"></i></button>
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center">
-              <label for="" class="col-sm-1 col-form-label">언어</label>
-              <div class="col-sm-4 me-10">
-                <div class="tom-select-custom">
-                  <select
-                    class="js-select form-select"
-                    autocomplete="off"
-                    data-hs-tom-select-options='{
-                            "hideSearch": true
-                        }'
+            <Row>
+              <Col span={12}>
+                <Form.Item 
+                  name="title-text" 
+                  label="제목/내용"
+                  layout="vertical"
+                  labelCol={{ span: 12 }}
+                  wrapperCol={{ span: 12 }}
+                >
+                  <Input allowClear />
+                </Form.Item>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={12}>
+                <Form.Item 
+                  name="title-text" 
+                  label="언어" 
+                  layout="vertical"
+                  labelCol={{ span: 12 }}
+                  wrapperCol={{ span: 12 }}
+                >
+                  <Select
+                    defaultValue="전체"
                   >
-                    <option value="1">전체</option>
-                    <option value="2">국문</option>
-                    <option value="3">영문</option>
-                  </select>
-                </div>
-              </div>
-              <label for="" class="col-sm-1 col-form-label">노출여부</label>
-              <div class="col-sm-4">
-                <div class="tom-select-custom">
-                  <select
-                    class="js-select form-select"
-                    autocomplete="off"
-                    data-hs-tom-select-options='{
-                            "hideSearch": true
-                        }'
+                    <Option value="male">전체</Option>
+                    <Option value="female">국문</Option>
+                    <Option value="other">영문</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
+
+              <Col span={12}>
+                <Form.Item 
+                  name="title-text" 
+                  label="노출여부" 
+                  layout="vertical"
+                  labelCol={{ span: 12 }}
+                  wrapperCol={{ span: 12 }}
+                >
+                  <Select
+                    defaultValue="전체"
                   >
-                    <option value="1">전체</option>
-                    <option value="2">노출</option>
-                    <option value="3">비노출</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="button" class="btn btn-soft-info">검색</button>
-            </div>
+                    <Option value="male">전체</Option>
+                    <Option value="female">노출</Option>
+                    <Option value="other">비노출</Option>
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={24} align="right">
+                <Button>검색</Button>
+              </Col>
+            </Row>
           </form>
         </div>
       </div>

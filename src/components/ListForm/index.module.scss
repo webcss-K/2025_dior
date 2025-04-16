@@ -1,0 +1,48 @@
+.TableForm{
+  > div{
+    > div{
+      > div{
+        > div{
+          border-top: none !important;
+          border-inline-start: none !important;
+          border-start-start-radius: 0 !important;
+          border-start-end-radius: 0 !important;
+
+          table{
+            tr{
+              th{
+                padding: .75rem .75rem !important;
+                color: #677788 !important;
+                font-size: .74375rem;
+                background-color: #f8fafd !important;
+                border-inline-end: none !important;
+                border-start-start-radius: 0 !important;
+                border-start-end-radius: 0 !important;
+              }
+              td{
+                padding: .75rem .75rem !important;
+                color: rgb(103, 119, 136);
+                font-size: 0.875rem;
+                border-inline-end: none !important;
+              }
+            }
+          }
+        }
+
+        .ant-pagination{
+          li{
+
+            &.ant-pagination-item-active{
+              border-color: #377dff;
+              background-color: #377dff;
+              
+              a{
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

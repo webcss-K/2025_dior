@@ -7,22 +7,20 @@ import Style from './index.module.scss';
 import { Table } from "antd";
 
 const ListForm = (props) => {
-  let dataTitleLength = props;
-  console.log(dataTitleLength)
-
   return (
     <>
-      <Table 
-        columns={props.columns} 
-        dataSource={props.data} 
-        bordered 
-        pagination={{ position: "BottomCenter" }} 
-       />
-
       <div class="card-body">
         <div class="d-flex justify-content-end mb-3">
           <a href="./noticeAdd.html" class="btn btn-soft-primary">등록하기<i class="bi bi-plus-circle-dotted pt-1 ms-1"></i> </a>
         </div>
+
+        <Table 
+        className={Style['TableForm']}
+        columns={props.columns} 
+        dataSource={props.data}
+        bordered 
+        pagination={{ position: ['bottomCenter'] }} 
+       />
         <div class="table-responsive datatable-custom">
           <table class="js-datatable table table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
             <thead class="thead-light">

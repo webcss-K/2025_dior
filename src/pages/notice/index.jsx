@@ -1,5 +1,6 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
+import { Link } from "react-router-dom";
 
 // style
 import Style from './index.module.scss';
@@ -9,13 +10,6 @@ import SearchForm from 'components/SearchForm';
 import ListForm from 'components/ListForm';
 import Pagination from 'components/Pagination';
 
-const sharedOnCell = (_, index) => {
-  if (index === 1) {
-    return { colSpan: 0 };
-  }
-  return {};
-};
-
 const columns = [
   {
     title: 'No',
@@ -23,19 +17,31 @@ const columns = [
   },
   {
     title: '제목',
-    dataIndex: 'Title'
+    dataIndex: 'Title',
+    width: 200
   },
   {
     title: '내용',
-    dataIndex: 'Text'
+    dataIndex: 'Text',
+    render: (text, record) => (
+      <Link className={Style['TextLink']} to={`View/${record.key}`}>{record.Title}{text}</Link>
+    )
+  },
+  {
+    title: '언어',
+    dataIndex: 'Language',
   },
   {
     title: '노출여부',
-    dataIndex: 'DateVisit'
+    dataIndex: 'DateVisit',
+    render: (value) => (
+      value ? <i className='DateVisitOn'>노출</i> : <i className='DateVisitOff'>비노출</i>
+    ),
   },
   {
     title: '등록일',
-    dataIndex: 'DateTime'
+    dataIndex: 'DateTime',
+    width: 170
   }
 ]
 
@@ -44,6 +50,7 @@ const data = [
     key: '1',
     Title: '3월 예약 일정 안내',
     Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '국문',
     DateVisit: true,
     DateTime: '2023-02-20 12:23:12'
   },
@@ -51,6 +58,7 @@ const data = [
     key: '2',
     Title: '4월 예약 일정 안내',
     Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
     DateVisit: false,
     DateTime: '2023-02-20 12:23:12'
   },
@@ -58,6 +66,7 @@ const data = [
     key: '3',
     Title: '5월 예약 일정 안내',
     Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
     DateVisit: true,
     DateTime: '2023-02-20 12:23:12'
   }

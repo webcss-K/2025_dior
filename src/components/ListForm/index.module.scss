@@ -28,21 +28,20 @@
             }
           }
         }
-
-        .ant-pagination{
-          li{
-
-            &.ant-pagination-item-active{
-              border-color: #377dff;
-              background-color: #377dff;
-              
-              a{
-              }
-            }
-          }
-        }
       }
     }
   }
 }
 
+:global{
+  .ant-pagination-item{
+    font-weight: 400;
+    color: #677788;
+
+    &.ant-pagination-item-active{
+      background-color: #1677ff !important;
+      border: none !important;
+      color: #fff;
+    }
+  }
+}

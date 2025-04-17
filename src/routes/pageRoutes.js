@@ -48,7 +48,7 @@ const pageRoutes = {
       element: <Notice metaTitle='공지사항' key='3' />,
     },
     {// NoticeView
-      path: "/Notice/View",
+      path: "/Notice/View/:id",
       element: <NoticeView metaTitle='공지사항 상세' key='3' />,
     },
 

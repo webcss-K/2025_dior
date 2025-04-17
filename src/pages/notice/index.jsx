@@ -8,7 +8,6 @@ import Style from './index.module.scss';
 // conponents
 import SearchForm from 'components/SearchForm';
 import ListForm from 'components/ListForm';
-import Pagination from 'components/Pagination';
 
 const columns = [
   {
@@ -35,7 +34,7 @@ const columns = [
     title: '노출여부',
     dataIndex: 'DateVisit',
     render: (value) => (
-      value ? <i className='DateVisitOn'>노출</i> : <i className='DateVisitOff'>비노출</i>
+      value ? <i className={Style['DateVisitOn']}>노출</i> : <i className={Style['DateVisitOff']}>비노출</i>
     ),
   },
   {
@@ -69,6 +68,70 @@ const data = [
     Language: '영문',
     DateVisit: true,
     DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '4',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: true,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '5',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: true,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '6',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: true,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '7',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: false,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '8',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: true,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '9',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: false,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '10',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: false,
+    DateTime: '2023-02-20 12:23:12'
+  },
+  {
+    key: '11',
+    Title: '5월 예약 일정 안내',
+    Text: 'DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은DIOR SEONGSU의 3월 예약 일정 안내 드립니다. 3월 예약 오픈 예정일은',
+    Language: '영문',
+    DateVisit: true,
+    DateTime: '2023-02-20 12:23:12'
   }
 ];
 
@@ -92,8 +155,6 @@ const Notice = (props) => {
               <SearchForm/>
 
               <ListForm columns={columns} data={data} />
-              
-              <Pagination />
             </div>
           </div>
         </div>

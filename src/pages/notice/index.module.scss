@@ -1,7 +1,16 @@
 .TextLink{
   display: block;
   width: 200px;
+  color: rgb(103, 119, 136) !important;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  &:hover{
+    color: #1677ff !important;
+  }
+}
+
+.DateVisitOff{
+  color: rgb(237 76 120);
 }
